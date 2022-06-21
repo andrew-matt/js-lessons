@@ -130,6 +130,30 @@ console.log(counter.set(10));*/
 // console.log(factorial(5))
 
 // 1, 1, 2, 3, 5, 8, 13,
+// 0 + 1 = 1
+// 1 + 1 = 2
+// 2 + 1 = 3
+// 3 + 2 = 5
+// 5 + 3 = 8
+// 8 + 5 = 13
+
+// function fib(n) {
+//     let previous = 0
+//     let next = 1
+//     let sum = 0
+//     for (let i = 1; i < n; i++) {
+//         sum = previous + next
+//         previous = next
+//         next = sum
+//         console.log(sum)
+//     }
+//     return sum
+// }
+//
+// console.log(fib(7))
+
+// 1, 1, 2, 3, 5, 8, 13,
+// 0 + 1 = 1
 // 1 + 1 = 2
 // 2 + 1 = 3
 // 3 + 2 = 5
@@ -137,19 +161,13 @@ console.log(counter.set(10));*/
 // 8 + 5 = 13
 
 function fib(n) {
-    let previous = 0
-    let next = 1
-    let sum = 0
-    for (let i = 1; i < n; i++) {
-        sum = previous + next
-        previous = next
-        next = sum
-        console.log(sum)
+    if (n <= 1) {
+        return n
     }
-    return sum
+    return fib(n - 1) + fib(n - 2)
 }
 
-console.log(fib(7))
+console.log(fib(6))
 
 // Task 06
 // написать функцию, которая повторяет функционал метода flat массива на всю глубину.
