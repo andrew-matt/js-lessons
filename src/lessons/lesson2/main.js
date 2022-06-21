@@ -52,7 +52,7 @@ console.log(counter()); // 3*/
 // reset: установить счетчик в 0;
 // set: установить счетчик в заданное значение;
 
-function makeCounter(num) {
+/*function makeCounter(num) {
     let count = num
     return {
         increase: function() {
@@ -78,7 +78,7 @@ console.log(counter.increase());
 console.log(counter.decrease());
 console.log(counter.decrease());
 console.log(counter.reset());
-console.log(counter.set(10));
+console.log(counter.set(10));*/
 
 // Task 04*
 // Реализовать функцию superSum которая принимает число в качестве аргумента, которое указывает на количество слагаемых
@@ -94,6 +94,19 @@ console.log(counter.set(10));
 
 // Task 05
 // решить все задачи по рекурсии которые даны в конце статьи https://learn.javascript.ru/recursion
+
+function sumTo(n) {
+    let a = 0
+    if (n === 1) {
+        return n
+    }
+    for (let i = 1; i <= n; i++) {
+        a += i
+    }
+    return a
+}
+
+console.log(sumTo(6))
 
 // Task 06
 // написать функцию, которая повторяет функционал метода flat массива на всю глубину.
