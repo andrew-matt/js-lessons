@@ -95,15 +95,24 @@ console.log(counter.set(10));*/
 // Task 05
 // решить все задачи по рекурсии которые даны в конце статьи https://learn.javascript.ru/recursion
 
+// function sumTo(n) {
+//     let a = 0
+//     if (n === 1) {
+//         return n
+//     }
+//     for (let i = 1; i <= n; i++) {
+//         a += i
+//     }
+//     return a
+// }
+//
+// console.log(sumTo(6))
+
 function sumTo(n) {
-    let a = 0
     if (n === 1) {
         return n
     }
-    for (let i = 1; i <= n; i++) {
-        a += i
-    }
-    return a
+    return n + sumTo(n - 1)
 }
 
 console.log(sumTo(6))
