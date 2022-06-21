@@ -30,7 +30,7 @@ console.log(arr.filter(inArray([1, 2, 10]))); // 1,2*/
 // Task 02
 // Реализовать функцию makeCounter которая работает следующим образом:
 
-function makeCounter() {
+/*function makeCounter() {
     let count = 1
     return function () {
         return count++
@@ -42,7 +42,7 @@ console.log(counter()); // 1
 console.log(counter()); // 2
 const counter2 = makeCounter();
 console.log(counter2()); // 1
-console.log(counter()); // 3
+console.log(counter()); // 3*/
 
 // Task 03
 // Переписать функцию из Task 02 так, что бы она принимала число в качестве аргумента и это число было стартовым значением счетчика
@@ -51,6 +51,34 @@ console.log(counter()); // 3
 // decrease: -1
 // reset: установить счетчик в 0;
 // set: установить счетчик в заданное значение;
+
+function makeCounter(num) {
+    let count = num
+    return {
+        increase: function() {
+            count++
+            return count
+        },
+        decrease: function() {
+            count--
+            return count
+        },
+        reset: function() {
+            return count = 0
+        },
+        set: function(value) {
+            return count = value
+        },
+    }
+}
+
+const counter = makeCounter(1);
+console.log(counter.increase());
+console.log(counter.increase());
+console.log(counter.decrease());
+console.log(counter.decrease());
+console.log(counter.reset());
+console.log(counter.set(10));
 
 // Task 04*
 // Реализовать функцию superSum которая принимает число в качестве аргумента, которое указывает на количество слагаемых
