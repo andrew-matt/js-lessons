@@ -1,12 +1,31 @@
 // Task 01
 // Реализовать функцию sum которая суммирует 2 числа следующим образом sum(3)(6) === 9
-function sum(a) {
+/*function sum(a) {
     return function (b) {
         return a + b
     }
 }
 
-console.log(sum(3)(6))
+console.log(sum(3)(6))*/
+
+let arr = [1, 2, 3, 4, 5, 6, 7];
+
+function inBetween(a, b) {
+    return function (el) {
+        return el >= a && el <= b
+    }
+}
+
+console.log(arr.filter(inBetween(3, 6))); // 3,4,5,6
+
+function inArray(arr) {
+    return function (el) {
+        return arr.includes(el)
+    }
+
+}
+
+console.log(arr.filter(inArray([1, 2, 10]))); // 1,2
 
 // Task 02
 // Реализовать функцию makeCounter которая работает следующим образом:
