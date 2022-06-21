@@ -96,26 +96,38 @@ console.log(counter.set(10));*/
 // решить все задачи по рекурсии которые даны в конце статьи https://learn.javascript.ru/recursion
 
 // function sumTo(n) {
-//     let a = 0
-//     if (n === 1) {
-//         return n
-//     }
+//     let sum = 0
 //     for (let i = 1; i <= n; i++) {
-//         a += i
+//         sum += i
 //     }
-//     return a
+//     return sum
 // }
 //
 // console.log(sumTo(6))
 
-function sumTo(n) {
+// function sumTo(n) {
+//     if (n === 1) {
+//         return n
+//     }
+//     return n + sumTo(n - 1)
+// }
+//
+// console.log(sumTo(6))
+
+// function sumTo(n) {
+//     return n * (n + 1) / 2;
+// }
+//
+// console.log(sumTo(6))
+
+function factorial(n) {
     if (n === 1) {
         return n
     }
-    return n + sumTo(n - 1)
+    return n * factorial(n - 1)
 }
 
-console.log(sumTo(6))
+console.log(factorial(5))
 
 // Task 06
 // написать функцию, которая повторяет функционал метода flat массива на всю глубину.
