@@ -8,7 +8,7 @@
 
 console.log(sum(3)(6))*/
 
-let arr = [1, 2, 3, 4, 5, 6, 7];
+/*let arr = [1, 2, 3, 4, 5, 6, 7];
 
 function inBetween(a, b) {
     return function (el) {
@@ -25,16 +25,24 @@ function inArray(arr) {
 
 }
 
-console.log(arr.filter(inArray([1, 2, 10]))); // 1,2
+console.log(arr.filter(inArray([1, 2, 10]))); // 1,2*/
 
 // Task 02
 // Реализовать функцию makeCounter которая работает следующим образом:
-// const counter = makeCounter();
-// counter(); // 1
-// counter(); // 2
-// const counter2 = makeCounter();
-// counter2(); // 1
-// counter(); // 3
+
+function makeCounter() {
+    let count = 1
+    return function () {
+        return count++
+    }
+}
+
+const counter = makeCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+const counter2 = makeCounter();
+console.log(counter2()); // 1
+console.log(counter()); // 3
 
 // Task 03
 // Переписать функцию из Task 02 так, что бы она принимала число в качестве аргумента и это число было стартовым значением счетчика
